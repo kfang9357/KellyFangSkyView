@@ -36,7 +36,12 @@ public class SkyView {
 
     public double getAverage (int startRow, int endRow, int startCol, int endCol)
     {
-        
+        double sum = 0;
+        for (int i = startRow; i<endRow; startRow++)
+            for (int j = startCol; j< endCol; startCol++)
+            {
+
+            }
     }
 
 
