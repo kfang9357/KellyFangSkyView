@@ -2,6 +2,7 @@ package com.company;
 
 public class SkyView {
 
+    private double [] [] view;
 
     public SkyView (int numRows, int numCols, double[] scanned)
     {
@@ -19,7 +20,6 @@ public class SkyView {
                     for (int i = 0; i< numCols; i++)
                     {
                         view[j][i] = scanned[k];
-                        k++;
                     }
                 }
                 else
@@ -27,8 +27,10 @@ public class SkyView {
                     for (int i = numCols; i>0; i--)
                     {
                         view[j][i] = scanned[k];
+
                     }
                 }
+                k++;
 
             }
         }
@@ -40,8 +42,9 @@ public class SkyView {
         for (int i = startRow; i<endRow; startRow++)
             for (int j = startCol; j< endCol; startCol++)
             {
-
+                sum = sum + view [i][j];
             }
+            return sum;
     }
 
 
